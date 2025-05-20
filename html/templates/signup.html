@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ningning — Register / Login</title>
+
+  <!-- Pinyon Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles_login.css') }}">
+</head>
+<body>
+
+  <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" height="80px" style="margin:40px;">
+
+  <div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+
+    <!-- REGISTER -->
+    <div class="register">
+      <form action="{{ url_for('signup') }}" method="POST">
+        <label for="chk" aria-hidden="true">register</label>
+
+        <input type="text" name="fullname" placeholder="Full Name" value="{{ fullname|default('') }}"><br>
+
+        <input type="email" name="email" placeholder="Email" value="{{ email|default('') }}"><br>
+        {% if error2 %}
+          <p class="error-message">Email is already taken. Please try again!</p>
+        {% endif %}
+
+        <input type="text" name="username" placeholder="Username" value="{{ username|default('') }}"><br>
+        {% if error3 %}
+          <p class="error-message">Username is already taken. Please try again!</p>
+        {% endif %}
+
+        <input type="password" name="password" placeholder="Password"><br>
+        <input type="password" name="confirm" placeholder="Confirm Password"><br>
+        {% if error1 %}
+          <p class="error-message">Passwords do not match. Please try again!</p>
+        {% endif %}
+
+        <button type="submit">CREATE ACCOUNT</button>
+      </form>
+    </div>
+
+    <!-- LOGIN -->
+    <div class="log-in">
+      <form action="{{ url_for('login') }}" method="POST">
+        <label for="chk" aria-hidden="true">log-in</label>
+        <input type="email" name="email" placeholder="Email"><br>
+        <input type="password" name="password" placeholder="Password"><br>
+
+        {% if login_error %}
+          <p class="error-message">{{ login_error }}</p>
+        {% endif %}
+
+        <button type="submit">LOG IN</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const chk = document.getElementById('chk');
+    const showRegister = "{{ show_register|default('False') }}" === "True";
+
+    if (showRegister) chk.checked = true;
+  </script>
+
+</body>
+</html>

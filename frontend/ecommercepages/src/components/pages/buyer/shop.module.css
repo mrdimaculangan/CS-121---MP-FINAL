@@ -1,0 +1,95 @@
+body {
+    background-color: #3a0a1a ;
+}
+
+.shopSection {
+  text-align: center;
+  padding: 2rem;
+  background-color: #3a0a1a;
+}
+
+.shopSection h1 {
+  font-family:'Bayer TypeArchiType Regular'; 
+  color: #ffce1b;
+}
+.productGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.productCard {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  border: 2px solid #100101;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 0;
+  background-color: transparent;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.productCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/sample.jpeg') center/cover no-repeat;
+  opacity: 0.3; 
+  z-index: -1;
+}
+
+.productCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.productCard img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #090606;
+}
+
+.productName {
+  font-weight: bold;
+  font-family:'Bayer TypeArchiType Regular'; 
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.productPrice {
+  color: #d2cdcd;
+  font-size: 0.9rem;
+}
+
+.shopButton {
+  font-family:'Bayer TypeArchiType Regular'; 
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shopButton:hover {
+  background-color: #333;
+}

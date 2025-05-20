@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'Bayer TypeArchiType Regular';
+    src: url('../../assets/Bayer\ TypeArchiType\ Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Pinyon Script' ;
+    src: url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.loginregisterBody {
+  display: flex;
+  padding:0;
+  margin:0;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background: #3a0a1a;
+  background-size: cover;
+  font-family: 'Pinyon Script', cursive, sans-serif;
+}
+
+.loginregisterMain {
+  width: 600px;
+  height: 560px;
+  padding-top: 0;
+  margin:0;
+  position: relative;
+  overflow: hidden;
+  background: url(../../assets/login.jpeg);
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #0d0707;
+  transition: transform 0.6s ease-in-out;
+}
+
+.formPage {
+  position: absolute;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transition: transform 0.6s ease-in-out;
+}
+
+.loginForm {
+  z-index: 1; /* Z INDEX IS 1 COS ITS THE PARANG ON TOP FACING USER */
+}
+
+/* REGISTER FORM IN TERMS OF MAIN CONTAINER*/ 
+.registerForm {
+  background: #fdfbfb;
+  border-radius: 60% / 20%;
+  transform: translateY(70%);
+  z-index: 1;
+} 
+
+/* THIS IS FOR WHEN THE LOGIN IS THE ONE ACTIVE 
+    AND HOW THE REGISTER FORM WILL
+     LOOK SO IT STAYS IN ONE CONTAINER*/ 
+.loginregisterMain.active .registerForm {
+  transform: translateY(15%);
+  border-radius: 60% / 20%;
+  z-index: 2;
+}
+
+/* Main LABEL LOOK */
+.loginregisterMain label {
+  font-size: 2.3em;
+  justify-content: center;
+  color:#3a0a1a;
+  display: flex;
+  margin: 60px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.loginLabel {
+  transition: transform 0.6s ease;
+}
+
+.registerLabel {
+  transition: transform 0.6s ease;
+}
+
+/* IF register is active,login label MOVE up */
+.loginregisterMain.active .loginLabel {
+  transform: translateY(-50px);
+  color: #361022;
+}
+
+/* IF login is active, push register label down */
+.loginregisterMain:not(.active) .registerLabel {
+  transform: translateY(-30px);
+  color: #aa336a;
+}
+
+.registerButton, .logInButton {
+  width: 60%; 
+  height: 40px; 
+  margin: 10px auto; 
+  justify-content: center;
+  display: block;
+  color: white;
+  background: #fb9fc388;
+  font-size: 1em; 
+  margin-top: 12px; 
+  outline: none; 
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registerButton:hover, .logInButton:hover {
+  background-color: rgb(201, 101, 118);
+  transform: scale(1.05);
+}
+
+.formPage input {
+  width: 60%;
+  height: 40px;
+  background-color: rgb(242, 225, 228);
+  justify-content: center;
+  display: flex; 
+  margin: 5px auto; 
+  padding: 10px; 
+  border: none; 
+  outline: none; 
+  border-radius: 10px; 
+}
+

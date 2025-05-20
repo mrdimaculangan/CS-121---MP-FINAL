@@ -1,0 +1,118 @@
+.storeContainer{
+    flex: 1;
+    background-image: url('../../assets/profilebg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size:cover;
+    min-height: 100vh;
+    overflow-y:hidden;
+    flex-wrap: wrap;
+    max-height: 600px;
+}
+
+.storeTitle{
+    color: #602f32;
+    position: absolute;
+    margin-left: 645px;
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.addProduct{
+    background-color: #b84c65;
+    margin-left: 640px;
+    margin-top: 130px;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    font-family: 'Bayer TypeArchiType Regular';
+    color: white;
+    border: none;
+    
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+
+.addPopup{
+    background-color: white;
+    border: 2px solid #602f32;
+    width: 400px;
+    border-radius: 10px;
+    padding: 15px;
+      z-index: 1001;
+}
+
+.addtitle{
+    margin-left: 40px;
+}
+
+.productInput{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.closeAddProduct{
+    border: none;
+    color:#602f32;
+    background: transparent;
+    font-weight: 400;
+}
+
+.productPrice, .productDescription{
+    margin-top: 10px;
+}
+
+.addImage{
+    font-family: 'Bayer TypeArchiType Regular';
+    color:#602f32;
+}
+
+.submitProduct{
+    margin-top: 20px;
+    background-color: #b84c65;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    font-family: 'Bayer TypeArchiType Regular';
+    color: white;
+    border: none;
+    margin-left: 90px;
+}
+
+.productCard {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-left: 50px;
+  max-height: 300px;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.storeList{
+    margin-top: 30px;
+    display: flex;
+}
+
+.productImagePreview {
+  margin-top: 10px;
+  margin-top: 10px;
+  max-width: 100%;     
+  max-height: 150px;   
+  object-fit: cover;   
+  border-radius: 5px;
+}

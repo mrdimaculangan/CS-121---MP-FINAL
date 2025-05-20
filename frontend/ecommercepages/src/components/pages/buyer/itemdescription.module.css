@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Bayer TypeArchiType Regular';
+    src: url('../../assets/Bayer\ TypeArchiType\ Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+ .itemContainer {
+  background-color: #3a0a1a;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  font-family: 'Bayer TypeArchiType Regular', serif;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.productimage img {
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  width: 550px;
+}
+
+.productdescription {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.productname {
+  font-size: 2.4rem;
+  color: #3a0a1a;
+}
+
+.price {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 2rem;
+  color: #994b5e;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #422222;
+}
+
+.buttongroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.add {
+  background-color: #c74c68;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add:hover {
+  background-color: #a83a52;
+  transform: scale(1.03);
+}
+
+
+.failedOverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; 
+}
+
+.failedmessageBox{
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.failedMessage{
+  font-family: 'Bayer TypeArchiType Regular';
+  color: #602f32;
+  margin-bottom: 1rem;
+}
+
+.closefailedMessage{
+  font-family: 'Bayer TypeArchiType Regular';
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #602f32;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.quantityControls button {
+  padding: 4px 10px;
+  font-size: 16px;
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.quantityControls span {
+  font-size: 16px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.addtocartOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 999;
+}
+
+.addtocartMessageBox {
+  background-color: #3a0a1a;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+.addtocartMessage {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

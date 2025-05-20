@@ -1,0 +1,355 @@
+@font-face {
+    font-family: 'Bayer TypeArchiType Regular';
+    src: url('../../assets/Bayer\ TypeArchiType\ Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3a0a1a;
+  padding: 1rem 1rem;
+}
+
+/* --------- VIDEO SECTION ------------ */
+
+.videoSection {
+  padding: 5rem 5rem;
+  background: url('../../assets/pony.jpeg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.videoGrid {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sideImages {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sideImages img {
+  width: 150px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.centerVideo video {
+  width: 560px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* --------- FEATURED SECTION ------------ */
+
+.shopSection {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  background-color: #3a0a1a;
+  margin-bottom: 2rem;
+}
+
+ .celebsSection h1 {
+  font-family:'Bayer TypeArchiType Regular'; 
+  color: #ffce1b;
+  padding-bottom: 2rem;
+}
+
+.shopSection h1 {
+  font-family:'Bayer TypeArchiType Regular'; 
+  color: #ffffff;
+  padding-bottom: 2rem;
+}
+
+.productGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.productCard {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  border: 2px solid #100101;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 0;
+  background-color: transparent;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.productCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/sample.jpeg') center/cover no-repeat;
+  opacity: 0.3; 
+  z-index: -1;
+}
+
+.productCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.productCard img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #090606;
+}
+
+.productName {
+  font-weight: bold;
+  font-family:'Bayer TypeArchiType Regular'; 
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.productPrice {
+  color: #d2cdcd;
+  font-size: 0.9rem;
+}
+
+.shopButton {
+  font-family:'Bayer TypeArchiType Regular'; 
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shopButton:hover {
+  background-color: #333;
+}
+
+
+/* --------- CELEB SECTION ------------ */
+
+.celebsSection {
+  padding-bottom: 4rem;
+  text-align: center;
+  background-color: #3a0a1a;;
+  margin-bottom: 4rem;
+}
+
+.celebsSection img {
+  width: 29px;
+}
+
+.celebsSection h2 {
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-bottom: 1.2rem;
+}
+
+.celebsSection span {
+  color: white;
+  font-family: 'Bayer TypeArchiType';
+}
+
+.celebGrid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.celebCard {
+  background: white;
+  border: 2px dashed #f0c0c0;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 15px rgba(255, 192, 203, 0.2);
+  overflow: hidden;
+  width: 240px;
+  transition: transform 0.3s ease;
+}
+
+.celebCard:hover {
+  transform: scale(1.05);
+}
+
+.celebCard img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-bottom: 1px solid #ffe0e0;
+}
+
+.celebName {
+  font-size: 1rem;
+  padding: 0.5rem;
+  font-weight: 500;
+  color: #aa336a;
+  font-family: 'Bayer TypeArchiType';
+}
+
+/* --------- ABOUT US SECTION ------------ */ 
+
+.aboutSection {
+  background-color: #fff5f8;
+  padding: 3rem;
+  font-family: 'Bayer TypeArchiType Regular';
+  margin-bottom: 4rem;
+}
+
+.aboutGrid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.aboutText {
+  flex: 1;
+  max-width: 45%;
+  text-align: center; /* center-align text for aesthetic */
+  color: #3a0a1a;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.aboutText h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.aboutText p {
+  margin-bottom: 1rem;
+}
+
+.aboutText img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.aboutImages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.topRow {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.bottomRow {
+  display: flex;
+  justify-content: center;
+}
+
+.imageCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageCard img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.imageCard p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6a2b47;
+  font-family: 'Bayer TypeArchiType Regular';
+}
+
+
+.footer {
+  background-color: #3a0a1a;
+  color: white;
+  padding: 4rem 2rem;
+  font-family: 'Georgia', serif;
+  width: 100%;
+}
+
+.footerGrid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.column h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  color: #f2f2f2;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column li {
+  margin-bottom: 0.8rem;
+  color: #cccccc;
+  font-size: 0.95rem;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.column li:hover {
+  color: #f0d390;
+}
+
+

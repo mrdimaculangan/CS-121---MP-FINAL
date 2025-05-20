@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Bayer TypeArchiType Regular';
+    src: url('../../assets/Bayer\ TypeArchiType\ Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.navbar{
+    display: flex;
+    background-color: white;
+    border: none;
+}
+
+.navbarLinksLeft,.navbarLinksRight{
+    list-style: none;
+}
+
+.navbarLinksRight{
+    display: flex;
+    gap: 5px;
+    margin-right: 20px;
+}
+.navbarContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.storeName{
+    display: flex;
+    position: absolute;
+    transform: translateX(650px);
+}
+.searchBar{
+    transform: translateX(500px);
+    height: 35px;
+    background: transparent;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+.searchSubmit{
+    position: absolute;
+    background: transparent;
+    border: none;
+    transform: translateX(500px);
+    margin-top: 3px;
+}
